@@ -1,16 +1,15 @@
 def binary_search(list_of_numbers, item):
-    low = 0
-    high = len(list_of_numbers) - 1
-    while low <= high:
-        mid = (low + high)//2
-        print("now mid is ", mid)
-        guess = list_of_numbers[mid]
+    lowest = 0
+    highest = len(list_of_numbers) - 1
+    while lowest <= highest:
+        middle = (lowest + highest)//2
+        guess = list_of_numbers[middle]
         if guess == item:
-            return mid
+            return middle
         if guess > item:
-            high = mid - 1
+            highest = middle - 1
         else:
-            low = mid + 1
+            lowest = middle + 1
     return None
 
 
