@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0028df19-cd41-4356-90a5-8eea9a2a0036" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junior/positional.py" beforeDir="false" afterPath="$PROJECT_DIR$/junior/positional.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
     "Python.basic.executor": "Run",
     "Python.binary_search.executor": "Run",
     "Python.links.executor": "Run",
+    "Python.positional.executor": "Run",
     "Python.sort.executor": "Run",
     "Python.vectors.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
