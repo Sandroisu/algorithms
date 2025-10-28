@@ -21,3 +21,15 @@ def outer():
     inner()
 
 outer()
+
+
+def make_multiplier(n):
+    def multiply(x):
+        return x * n
+    return multiply
+
+times3 = make_multiplier(3)
+times5 = make_multiplier(5)
+
+print(times3(10))  # 30
+print(times5(10))  # 50
