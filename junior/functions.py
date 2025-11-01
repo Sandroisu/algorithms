@@ -74,9 +74,12 @@ def timeit(func):
 
 
 
-@timeit
+
 def slow_func():
     time.sleep(1)
     return "done"
+
+timeit = timeit(slow_func)
+
 
 slow_func()
