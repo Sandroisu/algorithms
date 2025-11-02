@@ -64,22 +64,19 @@ add = logger(add)
 add(3, 4)
 
 def timeit(func):
-    def time_wrapper():
-        start = time.time()
-        result = func()
-        print(result)
-        print(f"slow_func took {(time.time()-start)}")
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        end = time.perf_counter()
+        print(f"{func.__name__} took {end - start:.6f} seconds")
         return result
-    return time_wrapper
+    return wrapper
 
 
 
-
+@timeit
 def slow_func():
     time.sleep(1)
     return "done"
-
-timeit = timeit(slow_func)
-
 
 slow_func()
