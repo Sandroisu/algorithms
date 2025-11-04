@@ -31,19 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.basic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.binary_search.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.links.executor&quot;: &quot;Run&quot;,
-    &quot;Python.positional.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sort.executor&quot;: &quot;Run&quot;,
-    &quot;Python.vectors.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.basic.executor": "Run",
+    "Python.binary_search.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.links.executor": "Run",
+    "Python.numpy_start.executor": "Run",
+    "Python.positional.executor": "Run",
+    "Python.sort.executor": "Run",
+    "Python.vectors.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -61,16 +62,5 @@
       <updated>1746256546914</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/junior/functions.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
