@@ -25,3 +25,17 @@ A = np.array([[2, 0],
               [1, 3]])
 B = np.array([[1, 4],
               [2, 5]])
+
+import numpy as np
+
+# Матрица поворота на угол θ
+def rotate(theta_deg):
+    theta = np.radians(theta_deg)
+    return np.array([
+        [np.cos(theta), -np.sin(theta)],
+        [np.sin(theta),  np.cos(theta)]
+    ])
+
+v = np.array([1, 0])
+R = rotate(90)
+print(R @ v)
