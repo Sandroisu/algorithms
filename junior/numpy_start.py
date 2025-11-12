@@ -39,3 +39,16 @@ def rotate(theta_deg):
 v = np.array([1, 0])
 R = rotate(90)
 print(R @ v)
+
+
+# Исходные данные (рост → вес)
+X = np.array([[150], [160], [170], [180], [190]])  # рост
+y = np.array([[50], [55], [60], [65], [70]])       # вес
+
+# Добавляем столбец единиц (bias)
+X_b = np.hstack([X, np.ones((X.shape[0], 1))])
+
+# Решаем формулой нормальных уравнений
+w = np.linalg.inv(X_b.T @ X_b) @ X_b.T @ y
+
+print("Параметры модели (w, b):", w.ravel())
