@@ -52,3 +52,20 @@ X_b = np.hstack([X, np.ones((X.shape[0], 1))])
 w = np.linalg.inv(X_b.T @ X_b) @ X_b.T @ y
 
 print("Параметры модели (w, b):", w.ravel())
+
+# Признаки: площадь, количество комнат
+X = np.array([
+    [50, 1],
+    [60, 2],
+    [80, 3],
+    [100, 4]
+])
+# Целевая переменная: цена (тыс. $)
+y = np.array([[150], [180], [240], [300]])
+
+# Добавляем bias
+X_b = np.hstack([X, np.ones((X.shape[0], 1))])
+
+# Решаем
+w = np.linalg.inv(X_b.T @ X_b) @ X_b.T @ y
+print("w:", w.ravel())
