@@ -69,3 +69,8 @@ X_b = np.hstack([X, np.ones((X.shape[0], 1))])
 # Решаем
 w = np.linalg.inv(X_b.T @ X_b) @ X_b.T @ y
 print("w:", w.ravel())
+
+
+y_pred = X_b @ w
+mse = np.mean((y - y_pred) ** 2)
+print("MSE:", mse)
