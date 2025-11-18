@@ -1,3 +1,5 @@
+import time
+
 import numpy as np
 
 a = np.array([1, 2, 3, 4])
@@ -74,3 +76,9 @@ print("w:", w.ravel())
 y_pred = X_b @ w
 mse = np.mean((y - y_pred) ** 2)
 print("MSE:", mse)
+
+def new_age():
+    current = time.perf_counter()
+    print(f"{current}")
+
+new_age()
