@@ -82,3 +82,9 @@ def new_age():
     print(f"{current}")
 
 new_age()
+
+def min_max_scale(x):
+    x = np.array(x, dtype=float)
+    mn = x.min(axis=0)
+    mx = x.max(axis=0)
+    return (x - mn) / (mx - mn)
