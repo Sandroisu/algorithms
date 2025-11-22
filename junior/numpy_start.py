@@ -88,3 +88,9 @@ def min_max_scale(x):
     mn = x.min(axis=0)
     mx = x.max(axis=0)
     return (x - mn) / (mx - mn)
+
+def softmax(x):
+    x = np.array(x, dtype=float)
+    x = x - np.max(x, axis=-1, keepdims=True)
+    exp_x = np.exp(x)
+    return exp_x / np.sum(exp_x, axis=-1, keepdims=True)
