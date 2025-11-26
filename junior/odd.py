@@ -10,3 +10,15 @@ if right_this_minute in odds:
     print("This minute seems a little odd.")
 else:
     print("Not an odd minute")
+
+
+def is_palindrome(text):
+    cleaned = text.replace(" ", "").lower()
+    reversed_text = cleaned[::-1]
+    if cleaned == reversed_text:
+        print("Palindrome")
+    else:
+        print("Not a palindrome")
+
+user_input = input("Enter text: ")
+is_palindrome(user_input)
