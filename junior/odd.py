@@ -22,3 +22,26 @@ def is_palindrome(text):
 
 user_input = input("Enter text: ")
 is_palindrome(user_input)
+
+import random
+
+def guess_number():
+    number = random.randint(1, 20)
+    attempts = 0
+
+    while True:
+        user_input = input("Guess a number from 1 to 20: ")
+        guess = int(user_input)
+        attempts += 1
+
+        if guess == number:
+            print("Correct")
+            break
+        elif guess < number:
+            print("Too small")
+        else:
+            print("Too big")
+
+    print("Attempts:", attempts)
+
+guess_number()
