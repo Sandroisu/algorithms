@@ -45,3 +45,21 @@ def guess_number():
     print("Attempts:", attempts)
 
 guess_number()
+
+def word_stats(text):
+    cleaned = text.lower()
+    words = cleaned.split()
+    stats = {}
+
+    for w in words:
+        if w in stats:
+            stats[w] += 1
+        else:
+            stats[w] = 1
+
+    for word, count in stats.items():
+        print(word, count)
+
+user_input = input("Enter text: ")
+word_stats(user_input)
+
