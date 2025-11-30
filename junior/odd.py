@@ -63,3 +63,18 @@ def word_stats(text):
 user_input = input("Enter text: ")
 word_stats(user_input)
 
+
+def is_perfect_number(n):
+    total = 0
+    for i in range(1, n):
+        if n % i == 0:
+            total += i
+
+    if total == n:
+        print("Perfect number")
+    else:
+        print("Not perfect")
+
+user_input = input("Enter a number: ")
+number = int(user_input)
+is_perfect_number(number)
