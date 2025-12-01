@@ -78,3 +78,26 @@ def is_perfect_number(n):
 user_input = input("Enter a number: ")
 number = int(user_input)
 is_perfect_number(number)
+
+
+def validate_password(password):
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    has_length = len(password) >= 8
+
+    for ch in password:
+        if ch.isupper():
+            has_upper = True
+        elif ch.islower():
+            has_lower = True
+        elif ch.isdigit():
+            has_digit = True
+
+    if has_upper and has_lower and has_digit and has_length:
+        print("Valid")
+    else:
+        print("Invalid")
+
+user_input = input("Enter password: ")
+validate_password(user_input)
