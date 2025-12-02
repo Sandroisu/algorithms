@@ -101,3 +101,17 @@ def validate_password(password):
 
 user_input = input("Enter password: ")
 validate_password(user_input)
+
+
+def sum_of_digits(n):
+    text = str(n)
+    total = 0
+
+    for ch in text:
+        total += int(ch)
+
+    print(total)
+
+user_input = input("Enter a number: ")
+number = int(user_input)
+sum_of_digits(number)
