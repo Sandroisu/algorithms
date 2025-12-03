@@ -115,3 +115,28 @@ def sum_of_digits(n):
 user_input = input("Enter a number: ")
 number = int(user_input)
 sum_of_digits(number)
+
+
+def second_largest(numbers):
+    if len(numbers) < 2:
+        print("Not enough numbers")
+        return
+
+    first = max(numbers)
+    second = None
+
+    for n in numbers:
+        if n != first:
+            if second is None or n > second:
+                second = n
+
+    if second is None:
+        print("All numbers are equal")
+    else:
+        print(second)
+
+user_input = input("Enter numbers separated by spaces: ")
+parts = user_input.split()
+nums = [int(x) for x in parts]
+
+second_largest(nums)
