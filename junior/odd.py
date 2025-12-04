@@ -140,3 +140,15 @@ parts = user_input.split()
 nums = [int(x) for x in parts]
 
 second_largest(nums)
+
+
+def unique_in_order(items):
+    seen = []
+    for x in items:
+        if x not in seen:
+            seen.append(x)
+    print(seen)
+
+user_input = input("Enter items separated by spaces: ")
+parts = user_input.split()
+unique_in_order(parts)
