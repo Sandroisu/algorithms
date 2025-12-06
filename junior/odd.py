@@ -152,3 +152,30 @@ def unique_in_order(items):
 user_input = input("Enter items separated by spaces: ")
 parts = user_input.split()
 unique_in_order(parts)
+
+
+def validate_email(email):
+    if "@" not in email:
+        print("Invalid")
+        return
+
+    parts = email.split("@")
+    if len(parts) != 2:
+        print("Invalid")
+        return
+
+    name = parts[0]
+    domain = parts[1]
+
+    if name == "" or domain == "":
+        print("Invalid")
+        return
+
+    if "." not in domain:
+        print("Invalid")
+        return
+
+    print("Valid")
+
+user_input = input("Enter email: ")
+validate_email(user_input)
