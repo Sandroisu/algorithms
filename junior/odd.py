@@ -20,10 +20,12 @@ def is_palindrome(text):
     else:
         print("Not a palindrome")
 
+
 user_input = input("Enter text: ")
 is_palindrome(user_input)
 
 import random
+
 
 def guess_number():
     number = random.randint(1, 20)
@@ -44,7 +46,9 @@ def guess_number():
 
     print("Attempts:", attempts)
 
+
 guess_number()
+
 
 def word_stats(text):
     cleaned = text.lower()
@@ -60,6 +64,7 @@ def word_stats(text):
     for word, count in stats.items():
         print(word, count)
 
+
 user_input = input("Enter text: ")
 word_stats(user_input)
 
@@ -74,6 +79,7 @@ def is_perfect_number(n):
         print("Perfect number")
     else:
         print("Not perfect")
+
 
 user_input = input("Enter a number: ")
 number = int(user_input)
@@ -99,6 +105,7 @@ def validate_password(password):
     else:
         print("Invalid")
 
+
 user_input = input("Enter password: ")
 validate_password(user_input)
 
@@ -111,6 +118,7 @@ def sum_of_digits(n):
         total += int(ch)
 
     print(total)
+
 
 user_input = input("Enter a number: ")
 number = int(user_input)
@@ -135,6 +143,7 @@ def second_largest(numbers):
     else:
         print(second)
 
+
 user_input = input("Enter numbers separated by spaces: ")
 parts = user_input.split()
 nums = [int(x) for x in parts]
@@ -148,6 +157,7 @@ def unique_in_order(items):
         if x not in seen:
             seen.append(x)
     print(seen)
+
 
 user_input = input("Enter items separated by spaces: ")
 parts = user_input.split()
@@ -176,6 +186,7 @@ def validate_email(email):
         return
 
     print("Valid")
+
 
 user_input = input("Enter email: ")
 validate_email(user_input)
