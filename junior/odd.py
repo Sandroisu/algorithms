@@ -190,3 +190,20 @@ def validate_email(email):
 
 user_input = input("Enter email: ")
 validate_email(user_input)
+
+
+def second_max(nums):
+    if len(nums) < 2:
+        return None
+
+    max1 = nums[0]
+    max2 = None
+
+    for x in nums[1:]:
+        if x > max1:
+            max2 = max1
+            max1 = x
+        elif max2 is None or x > max2:
+            max2 = x
+
+    return max2
