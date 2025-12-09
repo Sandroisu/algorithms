@@ -207,3 +207,18 @@ def second_max(nums):
             max2 = x
 
     return max2
+
+def first_unique_char(s):
+    counts = {}
+
+    for ch in s:
+        if ch in counts:
+            counts[ch] += 1
+        else:
+            counts[ch] = 1
+
+    for ch in s:
+        if counts[ch] == 1:
+            return ch
+
+    return None
