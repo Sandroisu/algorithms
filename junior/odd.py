@@ -222,3 +222,16 @@ def first_unique_char(s):
             return ch
 
     return None
+
+
+def two_sum_pairs(nums, target):
+    seen = set()
+    pairs = []
+
+    for x in nums:
+        need = target - x
+        if need in seen:
+            pairs.append((need, x))
+        seen.add(x)
+
+    return pairs
