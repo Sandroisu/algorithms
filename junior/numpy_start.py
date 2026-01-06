@@ -65,3 +65,30 @@ def softmax(x):
     x = x - np.max(x, axis=-1, keepdims=True)
     exp_x = np.exp(x)
     return exp_x / np.sum(exp_x, axis=-1, keepdims=True)
+
+
+def gradient_step(X, y, w, lr):
+    y_pred = X @ w
+    error = y_pred - y
+    grad = (2 / X.shape[0]) * (X.T @ error)
+    return w - lr * grad
+
+X = np.array([
+    [1, 1],
+    [2, 1],
+    [3, 1]
+])  # x + bias
+
+y = np.array([
+    [3],
+    [5],
+    [7]
+])
+
+w = np.zeros((2, 1))
+lr = 0.1
+
+for _ in range(10):
+    w = gradient_step(X, y, w, lr)
+
+print(w)
