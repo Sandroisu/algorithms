@@ -307,3 +307,18 @@ def reverse_list(head):
         curr = nxt
 
     return prev
+
+def max_subarray_sum(nums, k):
+    if k > len(nums):
+        return None
+
+    window_sum = sum(nums[:k])
+    max_sum = window_sum
+
+    for i in range(k, len(nums)):
+        window_sum += nums[i]
+        window_sum -= nums[i - k]
+        if window_sum > max_sum:
+            max_sum = window_sum
+
+    return max_sum
