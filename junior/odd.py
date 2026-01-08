@@ -322,3 +322,19 @@ def max_subarray_sum(nums, k):
             max_sum = window_sum
 
     return max_sum
+
+def longest_unique_substring(s):
+    seen = {}
+    left = 0
+    max_len = 0
+
+    for right in range(len(s)):
+        ch = s[right]
+        if ch in seen and seen[ch] >= left:
+            left = seen[ch] + 1
+        seen[ch] = right
+        current_len = right - left + 1
+        if current_len > max_len:
+            max_len = current_len
+
+    return max_len
