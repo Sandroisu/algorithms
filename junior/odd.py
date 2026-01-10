@@ -338,3 +338,10 @@ def longest_unique_substring(s):
             max_len = current_len
 
     return max_len
+
+
+def build_prefix_sums(nums):
+    prefix = [0] * (len(nums) + 1)
+    for i in range(len(nums)):
+        prefix[i + 1] = prefix[i] + nums[i]
+    return prefix
