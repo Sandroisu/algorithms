@@ -345,3 +345,6 @@ def build_prefix_sums(nums):
     for i in range(len(nums)):
         prefix[i + 1] = prefix[i] + nums[i]
     return prefix
+
+def range_sum(prefix, l, r):
+    return prefix[r + 1] - prefix[l]
