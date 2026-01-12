@@ -348,3 +348,31 @@ def build_prefix_sums(nums):
 
 def range_sum(prefix, l, r):
     return prefix[r + 1] - prefix[l]
+
+
+def split_array_min_largest_sum(nums, k):
+    left = max(nums)
+    right = sum(nums)
+
+    def can_split(max_sum):
+        parts = 1
+        current = 0
+
+        for n in nums:
+            if current + n <= max_sum:
+                current += n
+            else:
+                parts += 1
+                current = n
+                if parts > k:
+                    return False
+        return True
+
+    while left < right:
+        mid = (left + right) // 2
+        if can_split(mid):
+            right = mid
+        else:
+            left = mid + 1
+
+    return left
