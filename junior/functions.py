@@ -1,4 +1,5 @@
 import time
+import heapq
 
 
 def greet(name):
@@ -80,3 +81,18 @@ def slow_func():
     return "done"
 
 slow_func()
+
+def top_k_largest(nums, k):
+    if k <= 0:
+        return []
+    if k >= len(nums):
+        return sorted(nums, reverse=True)
+
+    heap = nums[:k]
+    heapq.heapify(heap)
+
+    for x in nums[k:]:
+        if x > heap[0]:
+            heapq.heapreplace(heap, x)
+
+    return sorted(heap, reverse=True)
