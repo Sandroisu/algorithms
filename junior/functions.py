@@ -96,3 +96,50 @@ def top_k_largest(nums, k):
             heapq.heapreplace(heap, x)
 
     return sorted(heap, reverse=True)
+
+class LRUCache:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.map = {}
+        self.head = [None, None, None, None]
+        self.tail = [None, None, None, None]
+        self.head[3] = self.tail
+        self.tail[2] = self.head
+
+    def _remove(self, node):
+        prev_node = node[2]
+        next_node = node[3]
+        prev_node[3] = next_node
+        next_node[2] = prev_node
+
+    def _add_to_front(self, node):
+        first = self.head[3]
+        node[2] = self.head
+        node[3] = first
+        self.head[3] = node
+        first[2] = node
+
+    def get(self, key):
+        node = self.map.get(key)
+        if node is None:
+            return -1
+        self._remove(node)
+        self._add_to_front(node)
+        return node[1]
+
+    def put(self, key, value):
+        node = self.map.get(key)
+        if node is not None:
+            node[1] = value
+            self._remove(node)
+            self._add_to_front(node)
+            return
+
+        if len(self.map) == self.capacity:
+            lru = self.tail[2]
+            self._remove(lru)
+            del self.map[lru[0]]
+
+        new_node = [key, value, None, None]
+        self.map[key] = new_node
+        self._add_to_front(new_node)
