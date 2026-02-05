@@ -160,3 +160,19 @@ class LRUCache:
                     merged.append([start, end])
 
             return merged
+
+
+def quickselect(nums, k):
+    if not nums:
+        return None
+
+    pivot = nums[len(nums) // 2]
+    left = [x for x in nums if x < pivot]
+    mid = [x for x in nums if x == pivot]
+    right = [x for x in nums if x > pivot]
+
+    if k <= len(left):
+        return quickselect(left, k)
+    if k <= len(left) + len(mid):
+        return pivot
+    return quickselect(right, k - len(left) - len(mid))
